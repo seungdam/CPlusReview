@@ -55,6 +55,9 @@
     <ClCompile Include="sleep.cpp">
       <Filter>Lock\Sleep</Filter>
     </ClCompile>
+    <ClCompile Include="template.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">
@@ -86,6 +89,9 @@
     </Filter>
     <Filter Include="Lock\Sleep">
       <UniqueIdentifier>{c6dcdb1f-bf6d-464b-bdbc-9552cf9ed0b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generic">
+      <UniqueIdentifier>{b609a51a-7bef-4f38-93b2-dd986c20d312}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
