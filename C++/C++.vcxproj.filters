@@ -4,33 +4,6 @@
     <ClCompile Include="pch.cpp">
       <Filter>Header</Filter>
     </ClCompile>
-    <ClCompile Include="dead_lock_ex.cpp">
-      <Filter>Lock\DeadLock</Filter>
-    </ClCompile>
-    <ClCompile Include="dead_lock_ex2.cpp">
-      <Filter>Lock\DeadLock</Filter>
-    </ClCompile>
-    <ClCompile Include="atomic_ex.cpp">
-      <Filter>Atomic &amp; CAS</Filter>
-    </ClCompile>
-    <ClCompile Include="thread_ex.cpp">
-      <Filter>Thread</Filter>
-    </ClCompile>
-    <ClCompile Include="mutex_ex.cpp">
-      <Filter>Lock\DeadLock</Filter>
-    </ClCompile>
-    <ClCompile Include="MySpinLock.cpp">
-      <Filter>Lock\SpinLock</Filter>
-    </ClCompile>
-    <ClCompile Include="thread_unsafe_ex.cpp">
-      <Filter>Thread</Filter>
-    </ClCompile>
-    <ClCompile Include="thread_save_join.cpp">
-      <Filter>Thread</Filter>
-    </ClCompile>
-    <ClCompile Include="thread_safe_tls.cpp">
-      <Filter>Thread</Filter>
-    </ClCompile>
     <ClCompile Include="try_catch_Ex.cpp">
       <Filter>Exception</Filter>
     </ClCompile>
@@ -52,9 +25,6 @@
     <ClCompile Include="diamond_case.cpp">
       <Filter>Class</Filter>
     </ClCompile>
-    <ClCompile Include="sleep.cpp">
-      <Filter>Lock\Sleep</Filter>
-    </ClCompile>
     <ClCompile Include="template.cpp">
       <Filter>Generic</Filter>
     </ClCompile>
@@ -62,12 +32,6 @@
   <ItemGroup>
     <Filter Include="Header">
       <UniqueIdentifier>{0008b22c-2ef1-49fd-8db7-baf3d69f552e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Atomic &amp; CAS">
-      <UniqueIdentifier>{28951c09-79e8-42b3-9b19-5c74e076c064}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Thread">
-      <UniqueIdentifier>{c9459a70-25fc-47e6-8a6b-a6c01ea31d4b}</UniqueIdentifier>
     </Filter>
     <Filter Include="Exception">
       <UniqueIdentifier>{562271db-328f-4fb2-a6fe-57339ca0ebf6}</UniqueIdentifier>
@@ -78,18 +42,6 @@
     <Filter Include="Constexpr">
       <UniqueIdentifier>{a4015954-ac93-4c7b-90b3-316ab172b8bc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Lock">
-      <UniqueIdentifier>{1a67092f-d507-40b3-b9df-c2440f069bf0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Lock\SpinLock">
-      <UniqueIdentifier>{bc7752a1-7a79-4d86-bc59-14a655b88f5c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Lock\DeadLock">
-      <UniqueIdentifier>{abefb0b4-7aa5-4e87-98a3-1674c16656f3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Lock\Sleep">
-      <UniqueIdentifier>{c6dcdb1f-bf6d-464b-bdbc-9552cf9ed0b6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Generic">
       <UniqueIdentifier>{b609a51a-7bef-4f38-93b2-dd986c20d312}</UniqueIdentifier>
     </Filter>
@@ -97,9 +49,6 @@
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="MySpinLock.h">
-      <Filter>Lock\SpinLock</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
