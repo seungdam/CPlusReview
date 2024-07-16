@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="thread_life_cycle.cpp">
+      <Filter>1. Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="strong_memory_model.cpp">
+      <Filter>0. Memory Model</Filter>
+    </ClCompile>
+    <ClCompile Include="atomic_flag_2.cpp">
+      <Filter>3. Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="dead_lock_ex.cpp">
+      <Filter>3. Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="dead_lock_ex2.cpp">
+      <Filter>3. Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="mutex_ex.cpp">
+      <Filter>3. Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="MySpinLock.cpp">
+      <Filter>3. Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="condition_variable_3.cpp">
+      <Filter>2. Condition Variable</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_ex.cpp">
+      <Filter>1. Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_ex2.cpp">
+      <Filter>1. Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_safe_join.cpp">
+      <Filter>1. Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_safe_tls.cpp">
+      <Filter>1. Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_unsafe_ex.cpp">
+      <Filter>1. Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>99. Header</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="0. Memory Model">
+      <UniqueIdentifier>{3e5d7929-069f-40d2-96d7-50e5dfbb50f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1. Thread">
+      <UniqueIdentifier>{db2d0c67-ab17-418f-b9ef-3d444715ea84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2. Condition Variable">
+      <UniqueIdentifier>{7fb4e843-40f5-4187-9181-f6c0d917b37d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3. Lock">
+      <UniqueIdentifier>{17245f92-9eec-4d4e-8c2b-80b4bf9a6229}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99. Header">
+      <UniqueIdentifier>{af18a8ed-b0a8-4797-806f-d612e91c005b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MySpinLock.h">
+      <Filter>3. Lock</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>99. Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
