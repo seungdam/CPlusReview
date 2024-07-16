@@ -20,11 +20,12 @@ public:
 
 int main()
 {
-	// *** scoped_thread
-	// 항상 스레드의 라이프 사이클을 주시해야한다는 것은 매우 귀찮은 행위.
-	// 그렇다면 thread를 wrapping하는 객체를 정의해 join을 알아서 수행할 수 있도록 하는건 어떠한가?
-	// 라는 아이디어에서 나온 앤서니 윌리엄스의 scoped_thread
-	// scoped_thread는 thread를 encapsuled한 개념 like unique_lock, lock_guard
+	// *** scoped_thread \
+	\
+	 항상 스레드의 라이프 사이클을 주시해야한다는 것은 매우 귀찮은 행위. \
+	그렇다면 thread를 wrapping하는 객체를 정의해 join을 알아서 수행할 수 있도록 하는건 어떠한가? \
+	라는 아이디어에서 나온 앤서니 윌리엄스의 scoped_thread \
+	scoped_thread는 thread를 encapsuled한 개념. like unique_lock, lock_guard
 
 	scoped_thread st(thread([]() {cout << "Scoped Thread\n"; }));
 

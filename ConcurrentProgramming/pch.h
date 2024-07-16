@@ -8,6 +8,7 @@
 
 
 // make alias of basic data types
+
 using int8   = __int8;
 using int16  = __int16;
 using int32  = __int32;
