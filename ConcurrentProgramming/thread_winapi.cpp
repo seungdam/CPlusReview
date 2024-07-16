@@ -15,25 +15,6 @@ DWORD WINAPI WorkerThread(void* arg)
 	return tls;
 }
 
-template<class T>
-void WorkerThread(std::shared_ptr<T> ptr)
-{
-	ptr->task();
-}
-
-class Base
-{
-public:
-	void task()
-	{
-		std::lock_guard<std::mutex> lg(m);
-		std::cout << "Task()\n";
-	}
-private:
-	std::mutex m;
-
-};
-
 int main()
 {
 	// Window API에서도 스레드 관련 함수를 제공한다. ::CreateThread()
@@ -48,11 +29,11 @@ int main()
 	//  하지만 C/C++ 코드로 작성할 경우 이의 사용을 지양하라고 한다.
 	// CRT함수를 사용할 때, 문제를 야기시킬 수 있기 때문이다.
 	
+	auto thread_handle = ::CreateThread(0, 0, WorkerThread, 0, 0, 0);
 	
-	// 
-	std::shared_ptr spt = std::make_shared<Base>();
-
-	std::thread t1(WorkerThread<Base>, spt);
-
-	t1.join();
+	if (thread_handle != 0)
+	{
+		::CloseHandle(thread_handle);
+	}
+	::ExitThread(0);
 }

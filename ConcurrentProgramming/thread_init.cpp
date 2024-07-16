@@ -3,12 +3,12 @@
 // <windows.h>에 CreateThread() 메소드가 존재하지만
 // 이식성이 좋은 공용 라이브러리 헤더파일을 사용하자
 
-void WorkerThread()
+void Task()
 {
-	std::cout << "Worker Thread\n";
+	std::cout << "Do Task\n";
 }
 
-void WorkerThread2(uint32 num)
+void PrintTheadIdTask(uint32 num)
 {
 	std::cout << std::this_thread::get_id() << "|"
 		<< num <<  "\n";
