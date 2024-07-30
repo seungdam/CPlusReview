@@ -9,7 +9,7 @@ public:
 	{
 		for(int32 iter = 0; iter <= 3; ++iter)
 		std::this_thread::sleep_for(std::chrono::milliseconds(300));
-		std::cout << tid << "] Work Done\n";
+		std::cout << "\033[1;32m" << tid << "]\033[0m Work Done\n";
 	}
 private:
 	int32 tid;

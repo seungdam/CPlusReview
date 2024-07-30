@@ -34,10 +34,10 @@
     <ClCompile Include="thread_parameter.cpp">
       <Filter>1. Thread</Filter>
     </ClCompile>
-    <ClCompile Include="dead_lock_ex.cpp">
+    <ClCompile Include="dead_lock_case.cpp">
       <Filter>3. Lock\DeadLock</Filter>
     </ClCompile>
-    <ClCompile Include="dead_lock_ex2.cpp">
+    <ClCompile Include="raii.cpp">
       <Filter>3. Lock\DeadLock</Filter>
     </ClCompile>
     <ClCompile Include="async_cout.cpp">
@@ -53,7 +53,13 @@
       <Filter>3. Lock\Exclusive Lock</Filter>
     </ClCompile>
     <ClCompile Include="time_locking.cpp">
+      <Filter>3. Lock\Time Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="shared_lock.cpp">
       <Filter>3. Lock\Shared Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="dead_lock_case2.cpp">
+      <Filter>3. Lock\DeadLock</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -81,8 +87,11 @@
     <Filter Include="3. Lock\Exclusive Lock">
       <UniqueIdentifier>{7e23f80f-d55b-4998-a638-32b94d5ddd67}</UniqueIdentifier>
     </Filter>
-    <Filter Include="3. Lock\Shared Lock">
+    <Filter Include="3. Lock\Time Lock">
       <UniqueIdentifier>{54e3a786-a93e-45aa-a81d-bd3862b61aa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3. Lock\Shared Lock">
+      <UniqueIdentifier>{90471d94-14ce-43d1-91b6-b0b262c30d5c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
