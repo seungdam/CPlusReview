@@ -7,21 +7,6 @@
     <ClCompile Include="strong_memory_model.cpp">
       <Filter>0. Memory Model</Filter>
     </ClCompile>
-    <ClCompile Include="atomic_flag_2.cpp">
-      <Filter>3. Lock</Filter>
-    </ClCompile>
-    <ClCompile Include="dead_lock_ex.cpp">
-      <Filter>3. Lock</Filter>
-    </ClCompile>
-    <ClCompile Include="dead_lock_ex2.cpp">
-      <Filter>3. Lock</Filter>
-    </ClCompile>
-    <ClCompile Include="mutex_ex.cpp">
-      <Filter>3. Lock</Filter>
-    </ClCompile>
-    <ClCompile Include="MySpinLock.cpp">
-      <Filter>3. Lock</Filter>
-    </ClCompile>
     <ClCompile Include="condition_variable_3.cpp">
       <Filter>2. Condition Variable</Filter>
     </ClCompile>
@@ -49,6 +34,27 @@
     <ClCompile Include="thread_parameter.cpp">
       <Filter>1. Thread</Filter>
     </ClCompile>
+    <ClCompile Include="dead_lock_ex.cpp">
+      <Filter>3. Lock\DeadLock</Filter>
+    </ClCompile>
+    <ClCompile Include="dead_lock_ex2.cpp">
+      <Filter>3. Lock\DeadLock</Filter>
+    </ClCompile>
+    <ClCompile Include="async_cout.cpp">
+      <Filter>3. Lock\Synchronize</Filter>
+    </ClCompile>
+    <ClCompile Include="my_spin_lock.cpp">
+      <Filter>3. Lock\Exclusive Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="mutex_ex.cpp">
+      <Filter>3. Lock\Exclusive Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="spin_lock_atomic_flag.cpp">
+      <Filter>3. Lock\Exclusive Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="time_locking.cpp">
+      <Filter>3. Lock\Shared Lock</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="0. Memory Model">
@@ -66,13 +72,25 @@
     <Filter Include="99. Header">
       <UniqueIdentifier>{af18a8ed-b0a8-4797-806f-d612e91c005b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="3. Lock\DeadLock">
+      <UniqueIdentifier>{83ada154-316a-4201-b4c3-3fafb6231efd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3. Lock\Synchronize">
+      <UniqueIdentifier>{9cb3629f-042a-4a24-b867-f92f3817e7b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3. Lock\Exclusive Lock">
+      <UniqueIdentifier>{7e23f80f-d55b-4998-a638-32b94d5ddd67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3. Lock\Shared Lock">
+      <UniqueIdentifier>{54e3a786-a93e-45aa-a81d-bd3862b61aa8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MySpinLock.h">
-      <Filter>3. Lock</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>99. Header</Filter>
+    </ClInclude>
+    <ClInclude Include="my_spin_lock.h">
+      <Filter>3. Lock\Exclusive Lock</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
