@@ -7,7 +7,7 @@
     <ClCompile Include="strong_memory_model.cpp">
       <Filter>0. Memory Model</Filter>
     </ClCompile>
-    <ClCompile Include="condition_variable_3.cpp">
+    <ClCompile Include="cv_ex.cpp">
       <Filter>2. Condition Variable</Filter>
     </ClCompile>
     <ClCompile Include="thread_init.cpp">
@@ -63,6 +63,9 @@
     </ClCompile>
     <ClCompile Include="shared_lock2.cpp">
       <Filter>3. Lock\Shared Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="cv_ex2.cpp">
+      <Filter>2. Condition Variable</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
