@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// 2024-07-29
 // *** modern c++ 동시성 프로그래밍 p.87
 
 // reader-writer lock에 관한 이해
