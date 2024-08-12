@@ -1,38 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="thread_callable_unit.cpp">
-      <Filter>1. Thread</Filter>
-    </ClCompile>
     <ClCompile Include="strong_memory_model.cpp">
       <Filter>0. Memory Model</Filter>
     </ClCompile>
     <ClCompile Include="cv_ex.cpp">
       <Filter>2. Condition Variable</Filter>
     </ClCompile>
-    <ClCompile Include="thread_init.cpp">
-      <Filter>1. Thread</Filter>
-    </ClCompile>
-    <ClCompile Include="thread_winapi.cpp">
-      <Filter>1. Thread</Filter>
-    </ClCompile>
-    <ClCompile Include="thread_safe_by_join.cpp">
-      <Filter>1. Thread</Filter>
-    </ClCompile>
-    <ClCompile Include="thread_safe_by_tls.cpp">
-      <Filter>1. Thread</Filter>
-    </ClCompile>
-    <ClCompile Include="thread_unsafe_ex.cpp">
-      <Filter>1. Thread</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>99. Header</Filter>
-    </ClCompile>
-    <ClCompile Include="thread_scoped_thread.cpp">
-      <Filter>1. Thread</Filter>
-    </ClCompile>
-    <ClCompile Include="thread_parameter.cpp">
-      <Filter>1. Thread</Filter>
     </ClCompile>
     <ClCompile Include="dead_lock_case.cpp">
       <Filter>3. Lock\DeadLock</Filter>
@@ -66,6 +42,36 @@
     </ClCompile>
     <ClCompile Include="cv_ex2.cpp">
       <Filter>2. Condition Variable</Filter>
+    </ClCompile>
+    <ClCompile Include="joining_thread.cpp">
+      <Filter>1. Thread\C++20</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_callable_unit.cpp">
+      <Filter>1. Thread\C++11</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_init.cpp">
+      <Filter>1. Thread\C++11</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_parameter.cpp">
+      <Filter>1. Thread\C++11</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_safe_by_join.cpp">
+      <Filter>1. Thread\C++11</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_safe_by_tls.cpp">
+      <Filter>1. Thread\C++11</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_scoped_thread.cpp">
+      <Filter>1. Thread\C++11</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_unsafe_ex.cpp">
+      <Filter>1. Thread\C++11</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_winapi.cpp">
+      <Filter>1. Thread\C++11</Filter>
+    </ClCompile>
+    <ClCompile Include="stop_source.cpp">
+      <Filter>1. Thread\C++20</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +107,12 @@
     </Filter>
     <Filter Include="3. Lock\SpinLock">
       <UniqueIdentifier>{14e68311-2a8e-4a37-9043-d83d635389d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1. Thread\C++20">
+      <UniqueIdentifier>{bac942c1-582a-4f28-bd9e-875f481ce853}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1. Thread\C++11">
+      <UniqueIdentifier>{e3f519f2-01db-41b1-b207-abb4da71f2d1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
