@@ -73,6 +73,9 @@
     <ClCompile Include="stop_source.cpp">
       <Filter>1. Thread\C++20</Filter>
     </ClCompile>
+    <ClCompile Include="logging.cpp">
+      <Filter>99, Logging</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="0. Memory Model">
@@ -114,6 +117,9 @@
     <Filter Include="1. Thread\C++11">
       <UniqueIdentifier>{e3f519f2-01db-41b1-b207-abb4da71f2d1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="99, Logging">
+      <UniqueIdentifier>{74524574-2ea1-4e9e-930d-b32bd74ed41c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -121,6 +127,9 @@
     </ClInclude>
     <ClInclude Include="my_spin_lock.cpp">
       <Filter>3. Lock\SpinLock</Filter>
+    </ClInclude>
+    <ClInclude Include="logging.h">
+      <Filter>99, Logging</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
