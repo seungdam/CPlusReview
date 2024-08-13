@@ -1,11 +1,14 @@
 #pragma once
+
 #include <iostream>
 #include <thread>
 #include <utility>
 #include <atomic>
 #include <mutex>
 #include <vector>
-
+#include <sstream>
+#include <iomanip>
+#include <random>
 
 // make alias of basic data types
 
@@ -28,3 +31,4 @@ using uint64 = unsigned __int64;
 #define t_b "34m"
 #define t_p "35m"
 #define t_c "36m"
+

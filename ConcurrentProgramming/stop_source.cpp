@@ -1,48 +1,37 @@
 #include "pch.h"
-#include <sstream>
-#include <random>
-
+#include "logging.h"
 
 
 std::random_device rd;
 std::default_random_engine dre(rd());
-std::uniform_int_distribution<int> uid(1, 5);
+std::uniform_int_distribution<int> uid(1, 2);
+std::uniform_int_distribution<int> rgb(1, 230);
 
 using namespace std;
 
 thread_local int32 cnt(0);
 
+
+
 void Worker(std::stop_token stoken)
 {
-	
-	this_thread::sleep_for(3s);
-	
+
 	stringstream ss;
-	ss << this_thread::get_id();
-	uint64 tid = stoull(ss.str());
 	dre.seed(rd());
+	auto thr_color = rgb(dre);
+	char cntstr[10] = "\0";
+
 	while (true)
 	{
 		this_thread::sleep_for(chrono::seconds(uid(dre)));
 		if (stoken.stop_requested())
 		{
-			printf( t_set t_bold t_g  "[%08lld] "
-					t_set t_bold t_r  "Task Terminated..\n" t_reset, tid);
+			PrintThreadMsg(thr_color, "\033[1;31m Task Terminated..\033[0m", " Total Count: [", cnt, "]\n");
 			break;
 		}
-		printf(t_set t_bold t_g  "[%08lld] "
-		 t_set t_bold t_y  "Do Tasking..." 
-		 t_set t_bold t_p "[%d]\n" t_reset, tid, cnt++);
+		PrintThreadMsg(thr_color, "\033[0mDo Tasking...[", cnt++, "]\033[0m\n");
+		cntstr[0] = '\0';
 	}
-
-	printf(t_set t_bold t_g  "[%08lld] "
-		t_set t_bold t_y  "Total Count: "
-		t_set t_bold t_p "[%d]\n" t_reset, tid, cnt);
-}
-
-void Worker2()
-{
-	return;
 }
 
 int main()
@@ -56,30 +45,30 @@ int main()
 		workers.push_back(jthread(Worker, ssource.get_token()));
 	}
 
-	printf("=============stop_source==========\n");
+	printf("====stop_source====\n");
 	printf(t_set t_y  "ssource.stop_requested(): "
 		t_set t_bold t_r	"%s\n" t_reset, ssource.stop_requested() ? " True" : "False");
 	printf(t_set t_y  "stoken.stop_requested(): "
-		t_set t_bold t_r	"%s\n" t_reset, stoken.stop_requested() ? " True" : "False");
+		t_set t_bold t_r	"%s\n\n" t_reset, stoken.stop_requested() ? " True" : "False");
 	
+	
+	std::stop_source invalid_ssource(nostopstate);
+	// *** nostopstate 옵션을 통해 생성한 ssource는 stop_possible()이 false를 return한다.
+	printf("====invalid stop_source====\n");
+	printf(t_set t_y  "invalid_ssource.stop_possible(): "
+		t_set t_bold t_r	"%s\n" t_reset, invalid_ssource.stop_possible() ? " True" : "False");
+	printf(t_set t_y  "invalid_stoken.stop_possible(): "
+		t_set t_bold t_r	"%s\n\n" t_reset, invalid_ssource.get_token().stop_possible() ? " True" : "False");
 
-	this_thread::sleep_for(5s);
+	this_thread::sleep_for(10s);
+	
+	printf("\n\nCall Request Stop!!!\n");
 	ssource.request_stop();
-	for (auto& i : workers) i.join();
-	
-	
+
 	printf(t_set t_y  "ssource.stop_requested(): "
 		t_set t_bold t_r	"%s\n" t_reset, ssource.stop_requested() ? " True" : "False");
 	printf(t_set t_y  "stoken.stop_requested(): "
-		t_set t_bold t_r	"%s\n" t_reset, stoken.stop_requested() ? " True" : "False");
-	
-	
+		t_set t_bold t_r	"%s\n\n" t_reset, stoken.stop_requested() ? " True" : "False");
 
-	std::stop_source invalid_ssource(nostopstate); // 기본 생성자로 생성된 stop_source 객체는 유효하지 않음
-
-	printf(t_set t_y  "invalid_ssource.stop_requested(): "
-		t_set t_bold t_r	"%s\n" t_reset, stoken.stop_possible() ? " True" : "False");
-	printf(t_set t_y  "invalid_stoken.stop_requested(): "
-		t_set t_bold t_r	"%s\n" t_reset, stoken.stop_possible() ? " True" : "False");
 
 }
