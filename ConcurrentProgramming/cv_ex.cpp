@@ -1,13 +1,15 @@
-#include <iostream>
-#include <thread>
-#include <vector>
-#include <mutex>
+#include "pch.h"
 #include <condition_variable>
 
 using namespace std;
 
+random_device rd;
+default_random_engine dre(rd());
+uniform_int_distribution<int> uid(1, 2);
+uniform_int_distribution<int> rgb(1, 230);
+
 // shared_data
-vector<__int32> shared_data;
+vector<int32> shared_data;
 bool is_data_ready;
 
 // for thread synchronize
@@ -17,31 +19,22 @@ condition_variable cv;
 
 
 
-void WaitingForWork() // reciver thread
+void Reciever() // reciver thread
 {
-	cout << "Reciver: Waiting.\n";
+	PrintThreadMsg(rgb(dre), "\033[1;33m[Recv]:\033[0m Waiting...\n");
 	unique_lock<mutex> ul(m);
 	cv.wait(ul, [] {return is_data_ready; });
-	/* notification 이 올 때까지 lock을 유지함
-	wait (lock, predicate())
-	{
-		while(!predicate())
-		{
-			wait(lock);
-		}
-	}
-	*/
 	shared_data[1] = 0;
-	cout << "Reciver: Work Done.\n";
+	PrintThreadMsg(rgb(dre), "\033[1;33m[Recv]:\033[0m Job Finished.\n");
 }
 
-void SetDataReady() // sender thread
+void Sender() // sender thread
 {
 	shared_data = { 1,2,3 }; // data set
 	{
 		lock_guard<mutex> lg(m); // lock_guard를 사용해 mutex life cycle을 보장
 		is_data_ready = true; //
-		std::cout << "Sender: Data Prepared.\n";
+		PrintThreadMsg(rgb(dre),"\033[1;33m[Send]:\033[0m Data is Ready.\n");
 	}
 	cv.notify_one(); // occur notification
 }
@@ -50,9 +43,7 @@ void SetDataReady() // sender thread
 
 int main()
 {
-	thread t1(WaitingForWork);
-	thread t2(SetDataReady);
-
-	t1.join();
-	t2.join();
+	
+	jthread t1(Reciever);
+	jthread t2(Sender);
 }

@@ -32,3 +32,5 @@ using uint64 = unsigned __int64;
 #define t_p "35m"
 #define t_c "36m"
 
+#include "logging.h"
+
