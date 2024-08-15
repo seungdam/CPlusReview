@@ -9,7 +9,7 @@ std::uniform_int_distribution<int> rgb(1, 230);
 
 using namespace std;
 
-thread_local int32 cnt(0);
+
 
 
 
@@ -17,21 +17,22 @@ void Worker(std::stop_token stoken)
 {
 
 	stringstream ss;
-	dre.seed(rd());
 	auto thr_color = rgb(dre);
-	char cntstr[10] = "\0";
+	int32 cnt = 0;
+	atomic<bool> flag = true;
+	
 
 	while (true)
 	{
 		this_thread::sleep_for(chrono::seconds(uid(dre)));
+		PrintThreadMsg(thr_color, "\033[0mDo Tasking...[", cnt++, "]\033[0m\n");
 		if (stoken.stop_requested())
 		{
-			PrintThreadMsg(thr_color, "\033[1;31m Task Terminated..\033[0m", " Total Count: [", cnt, "]\n");
 			break;
 		}
-		PrintThreadMsg(thr_color, "\033[0mDo Tasking...[", cnt++, "]\033[0m\n");
-		cntstr[0] = '\0';
 	}
+	PrintThreadMsg(thr_color, "\033[1;31m Task Terminated..\033[0m", " Total Count: [", cnt, "]\n");
+
 }
 
 int main()
