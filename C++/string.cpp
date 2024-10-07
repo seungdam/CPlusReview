@@ -1,6 +1,4 @@
-#include <string>
-#include <iostream>
-#include <vector>
+#include "pch.h"
 #include <cctype> // for character function : isupper,islower 
 
 using namespace std;

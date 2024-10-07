@@ -1,7 +1,6 @@
-#include <iostream>
+#include "pch.h"
 #include <fstream>
 #include <sstream>
-#include <vector>
 #include <cctype>
 
 // 문자열 작업을 위한 stream 함수들을 제공하는 stringstream 클래스

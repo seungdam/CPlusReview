@@ -1,6 +1,6 @@
+#include "pch.h"
 #include <fstream>
-#include <iostream>
-#include <string>
+
 //스트림과 버퍼
 //스트림은 데이터를 읽고 쓰는 데 사용되는 추상화된 개념입니다.
 // 스트림은 내부적으로 버퍼를 사용하여 효율적으로 데이터를 처리합니다.

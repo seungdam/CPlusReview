@@ -28,6 +28,54 @@
     <ClCompile Include="template.cpp">
       <Filter>Generic</Filter>
     </ClCompile>
+    <ClCompile Include="synthesize_member.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="oifstream.cpp">
+      <Filter>Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="stream_manipulator.cpp">
+      <Filter>Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="stream_state.cpp">
+      <Filter>Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="string_stream.cpp">
+      <Filter>Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="unbuffered_io.cpp">
+      <Filter>Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="string.cpp">
+      <Filter>String</Filter>
+    </ClCompile>
+    <ClCompile Include="non_mf_vs_mf.cpp">
+      <Filter>Operator</Filter>
+    </ClCompile>
+    <ClCompile Include="init_declareation.cpp">
+      <Filter>Init-Declare</Filter>
+    </ClCompile>
+    <ClCompile Include="function_operator.cpp">
+      <Filter>Operator</Filter>
+    </ClCompile>
+    <ClCompile Include="unique_ptr.cpp">
+      <Filter>Smart Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="lvalue-rvalue.cpp">
+      <Filter>Move</Filter>
+    </ClCompile>
+    <ClCompile Include="move_operator.cpp">
+      <Filter>Move</Filter>
+    </ClCompile>
+    <ClCompile Include="move_operator_with_raii.cpp">
+      <Filter>Move</Filter>
+    </ClCompile>
+    <ClCompile Include="move_only_class.cpp">
+      <Filter>Move</Filter>
+    </ClCompile>
+    <ClCompile Include="perfect-forwarding.cpp">
+      <Filter>Move</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">
@@ -44,6 +92,27 @@
     </Filter>
     <Filter Include="Generic">
       <UniqueIdentifier>{b609a51a-7bef-4f38-93b2-dd986c20d312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stream">
+      <UniqueIdentifier>{3683f3dd-688b-4825-bae0-665ae6a45f90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="String">
+      <UniqueIdentifier>{32e0a99f-2ab2-4903-a991-db6bda762772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Operator">
+      <UniqueIdentifier>{b858b097-9b46-4ecd-8ee2-8319eb2176ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Init-Declare">
+      <UniqueIdentifier>{f452d005-59ae-4d3b-a952-9333d2bd4376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithm Header">
+      <UniqueIdentifier>{c28b75a5-17e8-4aa3-9172-6480a38dcf99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Move">
+      <UniqueIdentifier>{b9542c4a-5623-44bf-96f7-bc0e846757da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Smart Pointer">
+      <UniqueIdentifier>{68535f49-1611-44a4-a7b2-772e364602f5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
