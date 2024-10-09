@@ -1,7 +1,7 @@
 #pragma once
 class RefCounter
 {
-	int32 _refCnt{ 1 };
+	int32 _refCnt{ 0 };
 public:
 	RefCounter();
 	RefCounter(const RefCounter& other); 

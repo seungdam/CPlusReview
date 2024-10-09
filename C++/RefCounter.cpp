@@ -16,5 +16,5 @@ void RefCounter::Share()
 
 void RefCounter::Release()
 {
-	if(_refCnt > 0) --_refCnt;
+	--_refCnt;
 }
