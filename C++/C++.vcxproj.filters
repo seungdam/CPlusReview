@@ -76,6 +76,30 @@
     <ClCompile Include="perfect-forwarding.cpp">
       <Filter>Move</Filter>
     </ClCompile>
+    <ClCompile Include="unique_ptr_and_polymorphism.cpp">
+      <Filter>Smart Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="unique_ptr_custom_deleter.cpp">
+      <Filter>Smart Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="handle_body_pattern.cpp">
+      <Filter>Smart Pointer\Design Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="HandleDate.cpp">
+      <Filter>Smart Pointer\Design Pattern\Handle</Filter>
+    </ClCompile>
+    <ClCompile Include="Date.cpp">
+      <Filter>Smart Pointer\Design Pattern\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="RefCounter.cpp">
+      <Filter>Smart Pointer\Ref-Counter</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedClass.cpp">
+      <Filter>Smart Pointer\Ref-Counter</Filter>
+    </ClCompile>
+    <ClCompile Include="test_ref_counter.cpp">
+      <Filter>Smart Pointer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">
@@ -114,10 +138,34 @@
     <Filter Include="Smart Pointer">
       <UniqueIdentifier>{68535f49-1611-44a4-a7b2-772e364602f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Smart Pointer\Design Pattern">
+      <UniqueIdentifier>{99cb4b80-2933-4419-8b52-7afbe8155fab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Smart Pointer\Design Pattern\Handle">
+      <UniqueIdentifier>{551fb749-c7be-4985-b04f-d1a7e809fe82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Smart Pointer\Design Pattern\Body">
+      <UniqueIdentifier>{83df37bc-6bbe-4b43-bb10-5e513182b5c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Smart Pointer\Ref-Counter">
+      <UniqueIdentifier>{476e5f7e-7816-4cb1-b8e3-6ce3b0876134}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HandleDate.h">
+      <Filter>Smart Pointer\Design Pattern\Handle</Filter>
+    </ClInclude>
+    <ClInclude Include="Date.h">
+      <Filter>Smart Pointer\Design Pattern\Body</Filter>
+    </ClInclude>
+    <ClInclude Include="RefCounter.h">
+      <Filter>Smart Pointer\Ref-Counter</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedClass.h">
+      <Filter>Smart Pointer\Ref-Counter</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
