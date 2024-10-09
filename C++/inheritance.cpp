@@ -63,7 +63,56 @@ class Machine
 // C++의 interface ==> abstract class
 // 추상 클래스는 오직 상속 목적으로써 활용된다.
 
+
+class Base
+{
+	int a;
+public:
+	virtual void print() { std::cout << "Base\n"; }
+};
+
+class Child : public Base
+{
+public:
+	void print() override { std::cout << "Child\n" ; }
+};
+
+class GrandChild final  : public Child
+{
+public:
+	void print() override final  { std::cout << "GrandChild\n"; }
+};
+
+void print_class(Base& b)
+{
+	b.print();
+}
+
+class Test
+{
+public:
+	virtual void func() = 0;
+	virtual ~Test() = 0;
+};
+
+class CTest : public Test
+{
+	void func() { std::cout << "func().\n"; }
+	~CTest() { std::cout << "Des\n."; }
+};
+
+
 int main()
 {
+	Base b;
+	Child c;
+	GrandChild gc;
+	print_class(b);
+	print_class(c);
+	print_class(gc);
 
+
+	Test* t = new CTest();
+	t->func();
+	delete t;
 }
