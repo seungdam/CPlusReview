@@ -6,7 +6,7 @@
 #include <mutex>
 #include <unordered_map>
 #include <algorithm>
-
+#include <memory>
 
 using int8 = __int8;
 using int16 = __int16;
