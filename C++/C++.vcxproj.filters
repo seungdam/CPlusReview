@@ -100,6 +100,12 @@
     <ClCompile Include="test_ref_counter.cpp">
       <Filter>Smart Pointer</Filter>
     </ClCompile>
+    <ClCompile Include="lists.cpp">
+      <Filter>Container</Filter>
+    </ClCompile>
+    <ClCompile Include="exercise.cpp">
+      <Filter>Container</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">
@@ -149,6 +155,9 @@
     </Filter>
     <Filter Include="Smart Pointer\Ref-Counter">
       <UniqueIdentifier>{476e5f7e-7816-4cb1-b8e3-6ce3b0876134}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Container">
+      <UniqueIdentifier>{e841092f-9579-494a-9f4a-81b5f8f8b982}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
