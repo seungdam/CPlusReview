@@ -4,14 +4,9 @@
 
 int main()
 {
-	SharedClass sc("Hello");
-	sc.print("sc");
+	SharedClass sc("sc","Hello");  // 0
+	SharedClass sc_copy{ sc };  // 1
+	SharedClass sc_copy2 = sc_copy; // 2
 
-	SharedClass sc2{ sc };
-	sc2.print("sc2");
-	sc.print("sc");
-
-	SharedClass msc{ std::move(sc2) };
-	msc.print("msc");
-	sc2.print("sc2");
+	SharedClass msc{ std::move(sc_copy) };
 }
