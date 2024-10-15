@@ -106,6 +106,12 @@
     <ClCompile Include="exercise.cpp">
       <Filter>Container</Filter>
     </ClCompile>
+    <ClCompile Include="shared_ptr.cpp">
+      <Filter>Smart Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="weak_ptr_and_ref_cyclecpp.cpp">
+      <Filter>Smart Pointer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">
