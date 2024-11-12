@@ -100,17 +100,35 @@
     <ClCompile Include="test_ref_counter.cpp">
       <Filter>Smart Pointer</Filter>
     </ClCompile>
-    <ClCompile Include="lists.cpp">
-      <Filter>Container</Filter>
-    </ClCompile>
-    <ClCompile Include="exercise.cpp">
-      <Filter>Container</Filter>
-    </ClCompile>
     <ClCompile Include="shared_ptr.cpp">
       <Filter>Smart Pointer</Filter>
     </ClCompile>
     <ClCompile Include="weak_ptr_and_ref_cyclecpp.cpp">
       <Filter>Smart Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearchTree.cpp">
+      <Filter>Container\BinaryTree</Filter>
+    </ClCompile>
+    <ClCompile Include="lists.cpp">
+      <Filter>Container\List</Filter>
+    </ClCompile>
+    <ClCompile Include="list_exercise.cpp">
+      <Filter>Container\List</Filter>
+    </ClCompile>
+    <ClCompile Include="associative_containers.cpp">
+      <Filter>Container\Associate Container</Filter>
+    </ClCompile>
+    <ClCompile Include="unordered_associative_containers.cpp">
+      <Filter>Container\Associate Container</Filter>
+    </ClCompile>
+    <ClCompile Include="nested_map.cpp">
+      <Filter>Container\Associate Container</Filter>
+    </ClCompile>
+    <ClCompile Include="bst_main.cpp">
+      <Filter>Container\BinaryTree</Filter>
+    </ClCompile>
+    <ClCompile Include="emplace.cpp">
+      <Filter>Container</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +183,15 @@
     <Filter Include="Container">
       <UniqueIdentifier>{e841092f-9579-494a-9f4a-81b5f8f8b982}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Container\BinaryTree">
+      <UniqueIdentifier>{c3b71316-d5b3-4187-8f43-6b9be81b1662}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Container\List">
+      <UniqueIdentifier>{5a70f820-b096-43c3-81a1-05bdf85a4b6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Container\Associate Container">
+      <UniqueIdentifier>{695b17c5-a9e2-4d83-947e-3866d2b87911}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -181,6 +208,9 @@
     </ClInclude>
     <ClInclude Include="SharedClass.h">
       <Filter>Smart Pointer\Ref-Counter</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySearchTree.h">
+      <Filter>Container\BinaryTree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
