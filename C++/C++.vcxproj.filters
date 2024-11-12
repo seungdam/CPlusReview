@@ -130,6 +130,12 @@
     <ClCompile Include="emplace.cpp">
       <Filter>Container</Filter>
     </ClCompile>
+    <ClCompile Include="predicate.cpp">
+      <Filter>Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="lamda.cpp">
+      <Filter>Algorithm</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">
@@ -158,9 +164,6 @@
     </Filter>
     <Filter Include="Init-Declare">
       <UniqueIdentifier>{f452d005-59ae-4d3b-a952-9333d2bd4376}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Algorithm Header">
-      <UniqueIdentifier>{c28b75a5-17e8-4aa3-9172-6480a38dcf99}</UniqueIdentifier>
     </Filter>
     <Filter Include="Move">
       <UniqueIdentifier>{b9542c4a-5623-44bf-96f7-bc0e846757da}</UniqueIdentifier>
@@ -191,6 +194,9 @@
     </Filter>
     <Filter Include="Container\Associate Container">
       <UniqueIdentifier>{695b17c5-a9e2-4d83-947e-3866d2b87911}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithm">
+      <UniqueIdentifier>{b03e052d-1f08-445f-818a-e2771782a7c3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
