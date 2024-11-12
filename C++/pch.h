@@ -5,8 +5,13 @@
 #include <atomic>
 #include <mutex>
 #include <unordered_map>
+#include <unordered_set>
+#include <map>
+#include <set>
 #include <algorithm>
+#include <format>
 #include <memory>
+#include <Windows.h>
 
 using int8 = __int8;
 using int16 = __int16;
