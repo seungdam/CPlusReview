@@ -18,6 +18,8 @@ public:
 
 		vector<std::function<void()>> action;
 		action.push_back(([this]() { GetDamage(10);}));
+		action.push_back(([this]() { GetDamage(20); }));
+		action.push_back(([this]() { GetDamage(10); }));
 	}
 
 };
