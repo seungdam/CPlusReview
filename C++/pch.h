@@ -11,6 +11,8 @@
 #include <algorithm>
 #include <format>
 #include <memory>
+
+#define NOMINMAX
 #include <Windows.h>
 
 using int8 = __int8;

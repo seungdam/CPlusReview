@@ -172,6 +172,18 @@
     <ClCompile Include="sorting.cpp">
       <Filter>Algorithm</Filter>
     </ClCompile>
+    <ClCompile Include="permutation.cpp">
+      <Filter>Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="minmax.cpp">
+      <Filter>Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="radom!!!.cpp">
+      <Filter>Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="exception.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">

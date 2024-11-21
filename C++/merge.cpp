@@ -14,7 +14,7 @@ int main()
 	vector<int> v3;
 	vector<int> v4;
 	vector<int> v5;
-
+	
 	merge(cbegin(v), cend(v), cbegin(v2), cend(v2), back_inserter(v3));
 	for (auto i : v3) cout << i << " ";
 	cout << "\n";
