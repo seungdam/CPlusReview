@@ -184,6 +184,15 @@
     <ClCompile Include="exception.cpp">
       <Filter>Exception</Filter>
     </ClCompile>
+    <ClCompile Include="exception_swap.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="chrono_time.cpp">
+      <Filter>Time</Filter>
+    </ClCompile>
+    <ClCompile Include="bitset.cpp">
+      <Filter>Bitset</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">
@@ -245,6 +254,12 @@
     </Filter>
     <Filter Include="Algorithm">
       <UniqueIdentifier>{b03e052d-1f08-445f-818a-e2771782a7c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Time">
+      <UniqueIdentifier>{aa06264a-67f8-4abc-afa6-f9b7b84d6e67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bitset">
+      <UniqueIdentifier>{76aa6a7e-008a-4492-8263-1c917f124105}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
