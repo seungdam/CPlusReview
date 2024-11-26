@@ -20,20 +20,26 @@ int main()
 
 	auto v{ vector<int>{3,1,4,1,5,9,2,8,1,6} };
 
-	partition(begin(v), end(v), [](auto n) { return n % 2 == 1; });
+	partition(begin(v), end(v), [&](auto n) { 
+		return n % 2 == 1; 
+		});
+	std::cout << "UnStable Version: ";
 	print(v);
 
-	// stable version은 좀 더 정렬된 결과를 가져온다.
-	// 3 1 "4" 1 5 9 2 8 1 6
-	// 3 1 1 5 9 4 2 8 1 6 
-	// 3 1 1 5 9 4 2 8 "1" 6 
-	// 3 1 1 5 9 1 4 2 8 6 
+	// stable version은 입력 순서를 보장하는 완전한 배치를 보여준다.
+
 
 	auto v2{ vector<int>{3,1,4,1,5,9,2,8,1,6} };
-	stable_partition(begin(v2), end(v2), [](auto n) { return n % 2 == 1; });
+	stable_partition(begin(v2), end(v2), [](auto n) { 
+		return n % 2 == 1; 
+		});
+	std::cout << "Stable-Version:   ";
 	print(v2);
 
-	// *** is_partition(range, predicate) : return bool 파티셔닝된 컨테이너인지 결과를 반환
+	//*** is_partition(range, predicate) : return bool 파티셔닝된 컨테이너인지 결과를 반환
 	// partition_point('''') : 만약 파티셔닝이 안된 컨테이너이라면, 최초로 파티셔닝 해야하는 원소의 이터레이터 반환
 	// 파티셔닝이 된 컨테이너라면 파티셔닝 포인트를 반환
+	auto iter = partition_point(begin(v2), end(v2), [](auto n) {return n % 2 == 1;});
+	std::cout << *iter << "\n";
+
 }

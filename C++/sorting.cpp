@@ -12,16 +12,16 @@ struct student
 
 int main()
 {
-	vector<student> s{ {"john smith's",100},{"john jame's",30}, {"john smith's", 50}, {"john jame's", 10}, {"john jame's", 50} };
+	vector<student> s{ {"john smith's",0},{"john jame's", 1}, {"john smith's", 2}, {"john jame's", 3}, {"john jame's", 4} };
 
 	// sort : 불완전 정렬(동일한 키에 관해 이후 원소의 정렬이 불완전 하다.)
 	sort(begin(s), end(s));
-	for (auto i : s) cout << i.name << " " << i.id << "\n";
+	for (auto& [name, id] : s) cout << name << " " << id << "\n";
 	cout << "\n\n";
 
 	// stable_sort : 완전 정렬 (동일한 키에 관해 원소의 정렬이 완전)
 	stable_sort(begin(s), end(s));
-	for (auto i : s) cout << i.name << " " << i.id << "\n";
+	for (auto &[name, id] : s) cout << name << " " << id << "\n";
 
 	// is_sorted : 정렬된 컨테이너인지 확인
 	// is_sorted_until: 정렬되지 않은 첫 원소 지점을 찾아 iterator를 반환
