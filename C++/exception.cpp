@@ -13,7 +13,7 @@ public:
 
 	virtual const char* what() const override
 	{ 
-		if (!msg.empty()) return msg.c_str(); 
+		if (!msg.empty())	return msg.c_str(); 
 							else return cmsg; 
 	}
 	virtual ~MyException() {}
