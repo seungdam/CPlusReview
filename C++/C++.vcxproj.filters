@@ -11,10 +11,7 @@
       <Filter>Class</Filter>
     </ClCompile>
     <ClCompile Include="constexpr.cpp">
-      <Filter>Constexpr</Filter>
-    </ClCompile>
-    <ClCompile Include="compare_compile_time_func.cpp">
-      <Filter>Constexpr</Filter>
+      <Filter>Template MetaProgramming</Filter>
     </ClCompile>
     <ClCompile Include="inheritance.cpp">
       <Filter>Class</Filter>
@@ -191,7 +188,52 @@
       <Filter>Time</Filter>
     </ClCompile>
     <ClCompile Include="bitset.cpp">
-      <Filter>Bitset</Filter>
+      <Filter>Miscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="tuple.cpp">
+      <Filter>Miscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="union_variant.cpp">
+      <Filter>Miscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="bind_and_callable_object.cpp">
+      <Filter>Miscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="member_function_ptr.cpp">
+      <Filter>Miscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="interfacing_to_c.cpp">
+      <Filter>Interfacing</Filter>
+    </ClCompile>
+    <ClCompile Include="func.c">
+      <Filter>Interfacing</Filter>
+    </ClCompile>
+    <ClCompile Include="rtti.cpp">
+      <Filter>Miscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="type_traits.cpp">
+      <Filter>Template MetaProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="const_expression.cpp">
+      <Filter>Template MetaProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="class_and_template.cpp">
+      <Filter>Template MetaProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="template_specialization.cpp">
+      <Filter>Template MetaProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="print.cpp">
+      <Filter>Template MetaProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="template_boat_solution.cpp">
+      <Filter>Template MetaProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="varadic_template.cpp">
+      <Filter>Template MetaProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="constexpr_if.cpp">
+      <Filter>Template MetaProgramming</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -203,9 +245,6 @@
     </Filter>
     <Filter Include="Class">
       <UniqueIdentifier>{1eb5130e-a886-42f2-a182-361e6e608ff0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Constexpr">
-      <UniqueIdentifier>{a4015954-ac93-4c7b-90b3-316ab172b8bc}</UniqueIdentifier>
     </Filter>
     <Filter Include="Generic">
       <UniqueIdentifier>{b609a51a-7bef-4f38-93b2-dd986c20d312}</UniqueIdentifier>
@@ -258,8 +297,14 @@
     <Filter Include="Time">
       <UniqueIdentifier>{aa06264a-67f8-4abc-afa6-f9b7b84d6e67}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Bitset">
+    <Filter Include="Miscellaneous">
       <UniqueIdentifier>{76aa6a7e-008a-4492-8263-1c917f124105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interfacing">
+      <UniqueIdentifier>{57e82bf4-bd9a-474d-8111-821f4413903a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Template MetaProgramming">
+      <UniqueIdentifier>{a4015954-ac93-4c7b-90b3-316ab172b8bc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -280,6 +325,12 @@
     </ClInclude>
     <ClInclude Include="BinarySearchTree.h">
       <Filter>Container\BinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="func.h">
+      <Filter>Interfacing</Filter>
+    </ClInclude>
+    <ClInclude Include="print.h">
+      <Filter>Template MetaProgramming</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
