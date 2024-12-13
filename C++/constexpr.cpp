@@ -1,7 +1,25 @@
 #include "pch.h"
 
 
+// constexpr function
+// 1. fuction body에서 아무런 함수 인자, 지역/전역변수 값의 변경을 허용 x ==> pure한 상태
+// 2. 함수 인자 및 리턴 값도 const-expression 값만
+// 3. 자동으로 inline의 형태로 작성된다. 왜? 함수 호출이 생략되기 때문이다.
+// 4. 즉 다중 정의가 가능하다는 것.
+// 5. 보통 lib 제작 과정에서 많이 활용함.
 
+// 6. compile time에 computing하기 때문에 runtime overhead가 x
+
+
+constexpr double km_to_mile(double mile) { return mile * 1.602; }
+
+const double a = km_to_mile(40); // ok 컴파일 타임 결정
+
+int d = 100;
+double b = km_to_mile(d); // ok 런타임 결정
+
+constexpr double f = 50;
+constexpr double c = km_to_mile(f); // ok 컴파일 타임 결정
 
 // 메타 프로그래밍(Meta Programming)
 
@@ -13,12 +31,16 @@
 // *** inline VS constexpr  
 //  constexpr ==> inline + 최적화 (이를 위해 inline보다 더많은 제약사항을 가짐)
 
- 
+
+// constexpr memeber
+// static 변수 관련해서 컴파일 타임에 결정할 때 활용하는 것이 좋음.
+
+
 class MyClass
 {
 private:
-	int32 x;
-	int32 y;
+	int32 x{0};
+	int32 y{0};
 
 public:
 	constexpr MyClass(const int& a) : x(a) 
@@ -36,10 +58,7 @@ public:
 };
 
 // constexpr 함수
-constexpr int32 multiply(const int32& x,const int32& y)
-{
-	return x * y;
-}
+constexpr int32 multiply(const int32& x, const int32& y) { return x * y; }
 
 int main() 
 {
@@ -48,7 +67,7 @@ int main()
 	const int32 cx = 100;
 	constexpr int32 cex = 100;
 
-	//constexpr 키워드 없이도 해당 생성자를 호출할 수 있다.
+							//constexpr 키워드 없이도 해당 생성자를 호출할 수 있다.
 	MyClass m(1);           // OK 이때는 기본 생성자로처럼 동작된다. \
 							      다만 y를 초기화하지 않았음으로 좋은 관례는 아니다.
 	
@@ -81,7 +100,7 @@ int main()
 
 	constexpr int32 retval5 = multiply(1, 10); // OK   (컴파일 타임에 결정)
 //  constexpr int32 retval5 = multiply(mx, my);   NO
-	constexpr int32 retval6 = multiply(cmx, cmy); // OK  (런타임 타임에 결정)
+	constexpr int32 retval6 = multiply(cmx, cmy); // OK  (컴타임 타임에 결정)
 	constexpr int32 retval7 = multiply(cex, cex); // OK  (컴파일 타임에 결정)
 }
 
